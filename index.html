@@ -68,8 +68,8 @@
   .product-card { background: var(--white); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
   .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
 
-  .product-img { width: 100%; aspect-ratio: 4/5; position: relative; overflow: hidden; background: #F0EBE1; }
-  .product-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.5s ease; }
+  .product-img { width: 100%; aspect-ratio: 4/5; position: relative; overflow: hidden; background: #F5F0E8; display: flex; align-items: center; justify-content: center; }
+  .product-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.5s ease; mix-blend-mode: multiply; }
   .product-card:hover .product-img img { transform: scale(1.04); }
   .product-tag-badge { position: absolute; top: 1rem; left: 1rem; background: var(--accent); color: var(--white); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.6rem; z-index: 2; }
   .product-overlay { position: absolute; inset: 0; background: rgba(26,26,26,0); display: flex; align-items: center; justify-content: center; transition: background 0.3s; z-index: 1; }
@@ -355,17 +355,17 @@ const POSITIONS = [
 // Unsplash free-to-use stock photos (Unsplash License)
 const PRODUCTS = [
   { id:1, name:'The Classic Tee',      type:'tees',    desc:'Ring-spun cotton, relaxed fit. The essential blank canvas.',        basePrice:599,  tag:'Best Seller', garment:'tee',
-    photo:'https://loremflickr.com/600/750/tshirt,white,clothing?lock=1',   alt:'Classic white t-shirt' },
+    photo:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=750&fit=crop&q=80',   alt:'White t-shirt on hanger' },
   { id:2, name:'Premium Oversized',    type:'tees',    desc:'Dropped shoulders, heavier weight. The streetwear staple.',         basePrice:799,  tag:'New',         garment:'tee',
-    photo:'https://loremflickr.com/600/750/tshirt,black,streetwear?lock=2', alt:'Oversized t-shirt' },
+    photo:'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&h=750&fit=crop&q=80',      alt:'Folded shirts flat lay' },
   { id:3, name:'The Pullover Hoodie',  type:'hoodies', desc:'Fleece-lined warmth with a roomy kangaroo pocket.',                 basePrice:1299, tag:'',            garment:'hoodie',
-    photo:'https://loremflickr.com/600/750/hoodie,pullover,fashion?lock=3', alt:'Pullover hoodie' },
+    photo:'https://images.unsplash.com/photo-1699275303942-47957eea44b1?w=600&h=750&fit=crop&q=80',  alt:'Sweatshirts on rack' },
   { id:4, name:'Zip-Up Hoodie',        type:'hoodies', desc:'Full-zip, ribbed cuffs — clean, structured, and versatile.',        basePrice:1499, tag:'New',         garment:'hoodie',
-    photo:'https://loremflickr.com/600/750/hoodie,zip,clothing?lock=4',     alt:'Zip-up hoodie' },
+    photo:'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=600&h=750&fit=crop&q=80',  alt:'Folded hoodies' },
   { id:5, name:'Muscle Tank',          type:'tanks',   desc:'Breathable cotton, wide-cut arm holes. Built for training.',        basePrice:449,  tag:'',            garment:'tank',
-    photo:'https://loremflickr.com/600/750/tanktop,fitness,sport?lock=5',   alt:'Muscle tank top' },
+    photo:'https://images.unsplash.com/photo-1604176354204-9268737828e4?w=600&h=750&fit=crop&q=80',  alt:'Folded clothes' },
   { id:6, name:'Racerback Tank',       type:'tanks',   desc:'Form-fitting with superior freedom of movement.',                   basePrice:499,  tag:'Popular',     garment:'tank',
-    photo:'https://loremflickr.com/600/750/tanktop,racerback,sport?lock=6', alt:'Racerback tank top' },
+    photo:'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&h=750&fit=crop&q=80',  alt:'Folded colorful clothes' },
 ];
 
 let state = {product:null,colorIdx:1,textColorIdx:0,size:'M',customText:'',fontIdx:0,position:'cc',qty:1};
